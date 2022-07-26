@@ -1,5 +1,5 @@
-# **Cypress Integration Testing of Infinite_Leaf_Carousel**
-Testing Infinite Carousel Component using Cypress Automation Testing tool. Repository contains files related to testing the Infinite Carousel using Cypress and React component infinite_leaf_carousel.
+# **Cypress Integration Testing of React_Leaf_Carousel**
+Testing React Carousel Component using Cypress Automation Testing tool. Repository contains files related to testing the React Carousel using Cypress and React carousel component.
 
 **Setup Up Cypress 10.3.1**
 **Any Version of Cypress older then 10 will have .spec.js extension while newer versions have .cy.js extension**
