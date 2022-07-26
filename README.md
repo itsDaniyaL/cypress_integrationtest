@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# **Cypress Integration Testing of Infinite_Leaf_Carousel**
+Testing Infinite Carousel Component using Cypress Automation Testing tool. Repository contains files related to testing the Infinite Carousel using Cypress and React component infinite_leaf_carousel.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Setup Up Cypress 10.3.1**
+**Any Version of Cypress older then 10 will have .spec.js extension while newer versions have .cy.js extension**
 
-## Available Scripts
+## **Pre-requisities**
+* Browser (Chrome)
+* React.js
+* Cypress (veriosn 10 or above) - Integration Testing
+* Visual Studio Code - IDE 
+> codesandbox.io does not provide environment for cypress based integration testing.
+* **
+## Bug Logging
+#### Image links should be updated as the provided links in the example are not responding
+##### Description
+Images in the Infinite Carousel are not loading due to image link are not responding. This may be due to image website removing the image or possibly website shut down.
 
-In the project directory, you can run:
+##### Steps
+* Visit baseURL - http://localhost:3000/
+* Wait for Dots and Arrows to Appear
+* Images will not appear in the Infinite Carousel Component due to not responding
 
-### `npm start`
+##### Environment 
+Staging
+* **
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **Exercise 3**
+### Task 1 - Environment Setup
+* In terminal, `npm install` to install all dependencies related to integration testing(cypress.io).
+* In terminal, `npm start` to setup development environment and start server. 
+* In terminal, `npx cypress open` to open Cypress Window.
+* Select e2e testing -> Chrome(or any other desired browser). A new tab will open in the browser.
+* Select 'InfiniteCarousel_IntegrationTesting.cy.js' to run integration test.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Teak 2 - Integration Tests
+* **Before Each Test, I visited the website.**
+* **Updated the image links as original links are not responding. Original image links are commented and are within the index.js file.**
+##### **Lazy Loading**
+Tested lazy loading of an image(image-14) by first, verifying image does exist and has 1 length(check for duplication) and is currently not visible. Second, slide the carousel to make image-14 visible and verified if image is indeed visible.
+> As all the images are instantly loaded within 500 milliseconds. It is only possible to test image existence and by sliding the carousel to verify if image is visible now.  
+##### **Number of items to show per responsive breakpoint (at least 3)**
+Verified number of items visible per responsive breakpoint for mobile and desktop devices. Changed viewport width and height to verify if atleast 3 images are visible on the screen.
+##### **Arrows and Dots Functionality**
+#####  Testing Dots Functionality
+Verified if dots are visible. If device's display is horizontaly long, dot(s) may not appear. Hence, have to test if dots are visible.
+Checked if Second Dot is currently not active. If true, clicked the second dot and checked if the seoncd dot is now active. Performed same test for third dot.
+**Have to wait 500 millisceonds/0.5 seconds before clicking as sliding animations takes 500 milliseconds to complete.**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##### Testing Arrows Functionality
+Verified if dots and arrows are visible and exist.
+Checked if Second Dot is currently not active. If true, clicked the next arrow(Right Arrow) and checked if second dot is now active. Performed same for prev arrow(Left Arrow).
+**Have to wait 500 millisceonds/0.5 seconds before clicking as sliding animations takes 500 milliseconds to complete.**
