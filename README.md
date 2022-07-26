@@ -29,6 +29,7 @@ Staging
 
 ## **Exercise 3**
 ### Task 1 - Environment Setup
+* Clone this repository in local folder. https://github.com/itsDaniyaL/cypress_integrationtest.git
 * In terminal, `npm install` to install all dependencies related to integration testing(cypress.io).
 * In terminal, `npm start` to setup development environment and start server. 
 * In terminal, `npx cypress open` to open Cypress Window.
