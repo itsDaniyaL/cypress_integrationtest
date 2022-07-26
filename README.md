@@ -14,7 +14,9 @@ Testing React Carousel Component using Cypress Automation Testing tool. Reposito
 ## Bug Logging
 #### Image links should be updated as the provided links in the example are not responding
 ##### Description
-Images in the Infinite Carousel are not loading due to image link are not responding. This may be due to image website removing the image or possibly website shut down.
+Images in the Infinite Carousel are not loading due to image link are not responding. This may be due to image website removing the image or possibly website shut down. Updating the image links would resolve this problem. In the provided screenshot, images are notr visible but Arrows and Dots are visible.
+> Screenshot
+![Original image links not responding](images/images_notRespoding.png)
 
 ##### Steps
 * Visit baseURL - http://localhost:3000/
