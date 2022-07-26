@@ -31,7 +31,12 @@ Staging
 * In terminal, `npm start` to setup development environment and start server. 
 * In terminal, `npx cypress open` to open Cypress Window.
 * Select e2e testing -> Chrome(or any other desired browser). A new tab will open in the browser.
+
+![Cypress Window Screenshot](images/cypress_window.png)
+![Cypress Browser Select Window](images/cypress_window_browser.png)
 * Select 'InfiniteCarousel_IntegrationTesting.cy.js' to run integration test.
+
+![Cypress Test Spec Window](images/cypress_selectSpec.png)
 
 
 ### Teak 2 - Integration Tests
@@ -52,3 +57,5 @@ Checked if Second Dot is currently not active. If true, clicked the second dot a
 Verified if dots and arrows are visible and exist.
 Checked if Second Dot is currently not active. If true, clicked the next arrow(Right Arrow) and checked if second dot is now active. Performed same for prev arrow(Left Arrow).
 **Have to wait 500 millisceonds/0.5 seconds before clicking as sliding animations takes 500 milliseconds to complete.**
+
+![Integration Test Specs of Carousel](images/cypress_testSpecs.png)
